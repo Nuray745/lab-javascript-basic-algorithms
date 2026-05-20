@@ -50,3 +50,65 @@ if (hacker1 < hacker2) {
 } else {
   console.log("What?! You both have the same name?");
 }
+
+
+
+
+
+let longText = `
+Lorem ipsum dolor sit amet consectetur adipisicing elit.
+Et harum doloremque et laboriosam.
+Lorem et ipsum et dolor sit amet.
+`;
+
+
+let words = longText.split(" ");
+
+console.log(`Number of words: ${words.length}`);
+
+
+let etCount = 0;
+
+for (let i = 0; i < words.length; i++) {
+  if (words[i].toLowerCase() === "et") {
+    etCount++;
+  }
+}
+
+console.log(`Number of times 'et' appears: ${etCount}`);
+
+
+
+
+
+
+
+let phraseToCheck = "A man, a plan, a canal, Panama!";
+
+let cleanPhrase = "";
+
+for (let i = 0; i < phraseToCheck.length; i++) {
+
+  let char = phraseToCheck[i].toLowerCase();
+
+  if (
+    (char >= "a" && char <= "z") ||
+    (char >= "0" && char <= "9")
+  ) {
+    cleanPhrase += char;
+  }
+}
+
+
+let reversedPhrase = "";
+
+for (let i = cleanPhrase.length - 1; i >= 0; i--) {
+  reversedPhrase += cleanPhrase[i];
+}
+
+
+if (cleanPhrase === reversedPhrase) {
+  console.log("It is a palindrome!");
+} else {
+  console.log("It is not a palindrome.");
+}
